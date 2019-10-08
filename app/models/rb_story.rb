@@ -175,7 +175,7 @@ class RbStory < Issue
     attribs = params.select{|k,v| !['prev', 'next', 'id', 'lft', 'rgt'].include?(k) && RbStory.column_names.include?(k) }
 
     attribs[:status] = RbStory.class_default_status
-    attribs = attribs.to_enum.to_h#Hash[*attribs.flatten]
+    attribs = attribs.to_enum.to_h
     s = RbStory.new(attribs)
     s.save
     s.position!(params)

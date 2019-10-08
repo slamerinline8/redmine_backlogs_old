@@ -4,7 +4,7 @@ class RbImpedimentsController < RbApplicationController
   unloadable
 
   def create
-    @settings = Backlogs.settings
+    @settings = Backlogs.setting
     begin
       @impediment = RbTask.create_with_relationships(params, User.current.id, @project.id, true)
     rescue => e
@@ -23,7 +23,7 @@ class RbImpedimentsController < RbApplicationController
 
   def update
     @impediment = RbTask.find_by_id(params[:id])
-    @settings = Backlogs.settings
+    @settings = Backlogs.setting
     begin
       result = @impediment.update_with_relationships(params)
     rescue => e
