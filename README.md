@@ -4,7 +4,10 @@ REDMINE BACKLOGS
 A Redmine plugin for agile teams. For more information,
 please visit https://backlogs.github.io/www/
 
-Currently tested on Redmine 4.2.3-Passenger running in Docker with MySQL 5.7. It's an ongoing project which tries to bring this plugin back to life.
+Currently tested on Redmine 4.2.3-Passenger running in Docker with MySQL 5.7.
+
+DON'T FORGET TO RENAME THE FOLDER TO redmine_backlogs. Otherwise it won't work.
+---------------
 
 At the moment it includes the following fixes mentioned here:
 https://github.com/backlogs/redmine_backlogs/issues/1153
